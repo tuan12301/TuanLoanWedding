@@ -10,7 +10,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* Apply Comfortaa when the comfortaa class is used */
-        .comfortaa { font-family: 'Comfortaa', cursive !important; }
+        .comfortaa {
+            font-family: 'Comfortaa', cursive !important;
+        }
+        /* Responsive story image (.story3) */
+        .story3 {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-width: 900px;
+            margin: 0 auto;
+            border: none; /* removed red border */
+            transform: translateY(-40px);
+            transition: transform .25s ease;
+            object-fit: cover;
+        }
+        /* Reduce the upward shift on small screens so image isn't cut off */
+        @media (max-width: 767px) {
+            .story3 {
+                transform: translateY(-10px);
+                max-width: 100%;
+            }
+        }
     </style>
     <link rel="manifest" href="site.webmanifest">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
@@ -241,6 +262,18 @@
                 </div>
             </div>
         </section>
+        <div
+            data-background="assets/img/gallery/section_bg1.png">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-9 col-lg-8 col-md-10">
+                        <div class="story-img">
+                            <img class="story3" src="assets/img/gallery/LIU04552.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <section class="pricing-card-area section-padding10 section-bg"
             data-background="assets/img/gallery/section_bg1.png">
             <div class="container">
